@@ -1,0 +1,9 @@
+extends layout
+block content
+    div.enter-box-back.registration-box
+        form(action="register", method="POST")
+            input.name-field(type="text", placeholder="Name", name="name")
+            input.email-field(type="email", placeholder="E-mail", name="email")
+            input.password-field(type="password", placeholder="Password", name="password")
+            input.password-repeat-field(type="password", placeholder="Password repeat", name="password_repeat")
+            input.registration-button(type="submit", value="Enter")

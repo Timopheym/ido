@@ -1,0 +1,24 @@
+extends layout
+block content
+    #Doing-app
+    img(src=twitter.profile_image_url)
+        twitter.name
+    Я сейчас:
+    input#status(type="text")
+    span#current-status(style="display:none")
+    br
+    a#delete-status(style="display:none", href="#")
+        Завершить дело.
+    br
+    a#search-confederate(style="display:none", href="#")
+        Найти соучастников!
+    a#show-history(style="display:none", href="#")
+        Показать историю дел
+    #messages-list
+    #confederate-list
+    script
+        var username = "#{twitter.name}"
+        var name = "#{twitter.screen_name}"
+    script(type="text/javascript", src="http://fripple.ru:3003/socket.io/socket.io.js")
+    script(type="text/javascript", src="/scripts/jquery.js")
+    script(type="text/javascript", src="/scripts/app.js")
